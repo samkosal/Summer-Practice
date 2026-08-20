@@ -81,13 +81,22 @@ public class PalindromeNumber {
      */
     public boolean isPalindromeString(int x) {
         // TODO: implement
-        if ((x != 0 && x % 10 == 0) || (x > 0)) {
-            return false;
-        }
+        // if ((x != 0 && x % 10 == 0) || (x < 0)) {
+        //     return false;
+        // }
         char[] charArray = Integer.toString(x).toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
 
-        while ()
-        return false;
+
+        while (left < right) {
+            if (charArray[left] != charArray[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 
     /**
