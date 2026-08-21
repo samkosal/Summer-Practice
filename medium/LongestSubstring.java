@@ -136,7 +136,7 @@ public class LongestSubstring {
 
         for (int right = 0; right < s.length(); right++) {
             
-            while ((left != right - 1) && window.contains(s.charAt(right))) {
+            while (window.contains(s.charAt(right))) {
                 window.remove(s.charAt(left));
                 left++;
             }
@@ -184,6 +184,14 @@ public class LongestSubstring {
         check(sol, "Aa",           2, "case matters - 'A' and 'a' are different");
         check(sol, "a b c a",      3, "the repeat that limits the window is the SPACE");
         check(sol, "ab cd",        5, "a space sits INSIDE the winning window");
+
+        // --- Adjacent duplicates, then more duplicates ------------------------
+        // Found by exhaustive differential testing. An eviction loop that can
+        // exit while the duplicate is STILL in the set leaves the set and the
+        // [left, right] range permanently out of sync, and every later answer
+        // is computed from a lie. These two fail in opposite directions.
+        check(sol, "bbcbba",       2, "adjacent pair first - over-counts if set desyncs");
+        check(sol, "ccbcba",       3, "adjacent pair first - under-counts if set desyncs");
 
         System.out.println();
         System.out.println("  brute force : " + passedBrute + " / " + total + " passed");

@@ -99,10 +99,11 @@ fundamentals/   plain Java practice
 
 | File | Problem | Difficulty | Status |
 |---|---|---|---|
-| [easy/TwoSum.java](easy/TwoSum.java) | [1. Two Sum](https://leetcode.com/problems/two-sum/) | Easy | 9/9 — brute force + hash map |
-| [easy/PalindromeNumber.java](easy/PalindromeNumber.java) | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | in progress |
-| [easy/ReverseLinkedList.java](easy/ReverseLinkedList.java) | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | iterative done; recursive in progress |
-| [medium/TwoSumII.java](medium/TwoSumII.java) | [167. Two Sum II — Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | 10/10 — brute force + two pointers |
+| [easy/TwoSum.java](easy/TwoSum.java) | [1. Two Sum](https://leetcode.com/problems/two-sum/) | Easy | **9/9** — brute force + hash map |
+| [easy/PalindromeNumber.java](easy/PalindromeNumber.java) | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | **20/20** — string two-pointer + half-reversal arithmetic |
+| [easy/ReverseLinkedList.java](easy/ReverseLinkedList.java) | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 9/9 iterative; recursive in progress |
+| [medium/LongestSubstring.java](medium/LongestSubstring.java) | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | **22/22** — brute force + sliding window |
+| [medium/TwoSumII.java](medium/TwoSumII.java) | [167. Two Sum II — Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | **10/10** — brute force + two pointers |
 
 Nothing in `hard/` yet.
 
