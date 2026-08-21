@@ -129,7 +129,23 @@ public class LongestSubstring {
      */
     public int lengthOfLongestSubstring(String s) {
         // TODO: implement
-        return 0;
+        int highest = 0;
+        int left = 0;
+
+        Set<Character> window = new HashSet<>();
+
+        for (int right = 0; right < s.length(); right++) {
+            
+            while ((left != right - 1) && window.contains(s.charAt(right))) {
+                window.remove(s.charAt(left));
+                left++;
+            }
+                
+            
+            window.add(s.charAt(right));
+            highest = Math.max(highest, window.size());
+        }
+        return highest;
     }
 
     // ========================================================================
